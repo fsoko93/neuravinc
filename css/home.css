@@ -1,0 +1,307 @@
+/* Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050a30;
+  padding-top: 100px; /* leave space for fixed header */
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #4151b4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+header img:first-of-type {
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Navbar container */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center; /* 🔧 Ensures vertical alignment */
+  gap: 25px;
+}
+
+/* Common nav link styles */
+nav ul li a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation for regular links */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #00bfff;
+  transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #00bfff;
+}
+
+/* ✅ LOGIN button specific styles */
+nav ul li a.login-button {
+  padding: 6px 14px;               /* Adjust padding */
+  border: 2px solid #00bfff;
+  border-radius: 6px;
+  line-height: 1;                  /* Align better */
+  height: auto;
+  display: inline-block;
+  margin-top: -2px;                /* Slight tweak for vertical centering */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a.login-button:hover {
+  background-color: #00bfff;
+  color: #fff;
+}
+
+/* Banner Section */
+.banner {
+  width: 100%;
+  height: 400px;
+  background: url('../Assets/images/home_banner.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-logo {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  margin: 40px auto;
+  padding: 40px 20px;
+  max-width: 700px;
+}
+
+#hero h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+#hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#hero button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+#hero button:hover {
+  background-color: #0056b3;
+}
+
+/* About Us Section */
+#aboutus {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.about-box {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 350px;
+}
+
+.about-img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.about-text {
+  flex: 1;
+  font-family: 'Lexend', sans-serif;
+  color: #333;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Mission Section */
+#mission {
+  padding: 4rem 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-color: #050a30;
+}
+
+.mission-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-text {
+  flex: 1;
+  color: #e0e0ff;
+  text-align: left;
+  max-width: 600px;
+}
+
+.mission-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cool-image-wrapper {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cool-image-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.masked-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: circle(50% at 50% 50%);
+  transition: clip-path 0.3s ease;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  background-color: #f9f9f9;
+  margin-top: 60px;
+}
+
+/* Typewriter animation */
+.typewriter {
+  font-size: 20px;
+  color: #00bfff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #00bfff;
+  width: fit-content;
+  margin: 20px auto 0;
+  animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-box {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .mission-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cool-image-wrapper {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .about-img {
+    max-width: 100%;
+  }
+}

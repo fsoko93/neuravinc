@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learning Preference – Neurovinc</title>
+  <link rel="stylesheet" href="/css/adhd-check.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/Assets/images/Vertical Image.png"/>
+</head>
+<body>
+  <header>
+    <a href="home.html">
+      <img src="/Assets/images/nav_logo.png" alt="Logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Help us understand you better!</h2>
+    <p>Select the option that best describes you. This will help us tailor your learning experience.</p>
+
+    <form action="signup-final.html" method="POST">
+      <div class="option-boxes">
+        <div class="box" data-value="ADHD">
+          <h3>I have ADHD</h3>
+          <p>I want tools and content that help me focus and learn my way.</p>
+        </div>
+
+        <div class="box" data-value="Non-ADHD">
+          <h3>I do not have ADHD</h3>
+          <p>I’d still love to use this platform to learn and explore.</p>
+        </div>
+
+        <div class="box" data-value="Not Sure">
+          <h3>I'm not sure</h3>
+          <p>I haven't consulted a professional about my conditions</p>
+        </div>
+      </div>
+
+      <input type="hidden" name="neurotype" id="neurotype" required />
+      <button type="submit" id="continueBtn" disabled>Continue</button>
+    </form>
+  </main>
+
+  <script>
+    const boxes = document.querySelectorAll('.box');
+    const hiddenInput = document.getElementById('neurotype');
+    const continueBtn = document.getElementById('continueBtn');
+
+    boxes.forEach(box => {
+      box.addEventListener('click', () => {
+        boxes.forEach(b => b.classList.remove('active'));
+        box.classList.add('active');
+        hiddenInput.value = box.dataset.value;
+        continueBtn.disabled = false;
+      });
+    });
+  </script>
+</body>
+</html>

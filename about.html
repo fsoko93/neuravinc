@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – NeuraVinc</title>
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="icon" type="image/png" href="Assets/images/Vertical Image.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <a href="home.html"><img src="Assets/images/nav_logo.png" alt="Logo" width="240" height="62"></a>
+    <nav>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="friend.html">AI-Friend</a></li>
+        <li><a href="merch.html">Our Merch</a></li>
+        <li><a href="donation.html">Donation</a></li>
+        <li><a href="login.html" class="login-button">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <main class="about-container">
+    <section class="section-header" data-aos="fade-right">
+        <h2>Meet the Team</h2>
+        <div class="underline-animation"></div>
+    </section>
+    <section class="team-photo">
+      <img src="Assets/images/IMG_5672.jpg" alt="Our Team" />
+    </section>
+
+    <section class="group-description">
+      <h2>Who We Are</h2>
+      <p>Neuravinc is a team of dedicated students who hope to make a change through bridging the educational gap.</p>
+      <div class="person_order">
+        <p>Back Row: Kristen, Rohan, Penny, Jeevanesh, Brayven</p>
+        <p>Front Row: Clarisa, Eva, Amy (Teaching Assistant), Aaron</p>
+      </div>
+        
+    </section>
+
+    <section class="founders">
+      <div class="founder-card">
+        <img src="Assets/images/aaron_portrait.png" alt="Aaron - Co-Founder" />
+        <h3>Aaron</h3>
+        <p>Co-Founder</p>
+        <!-- Optional: Add a short personal quote or role summary -->
+      </div>
+      <div class="founder-card">
+        <img src="Assets/images/rohan_portrait.png" alt="Rohan - Co-Founder" />
+        <h3>Rohan</h3>
+        <p>Co-Founder</p>
+      </div>
+    </section>
+  </main>
+  <section class="values-section">
+    <h2>Our Core Values</h2>
+    <div class="values-grid">
+      <div class="value-card" data-aos="fade-up">
+        <span class="icon">🎯</span>
+        <h3>Focus</h3>
+        <p>Helping kids concentrate through thoughtful design and adaptive learning.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="icon">🧠</span>
+        <h3>Empathy</h3>
+        <p>We understand different brains need different approaches. Compassion comes first.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="icon">⚡</span>
+        <h3>Engagement</h3>
+        <p>Making learning fun, dynamic, and deeply motivating for young minds.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="icon">🧩</span>
+        <h3>Inclusivity</h3>
+        <p>All learners belong. Our tools adapt for every child’s unique journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 NeuraVinc. All rights reserved.</p>
+  </footer>
+  <script>
+    const cards = document.querySelectorAll('.founder-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = "translateY(0)";
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    cards.forEach(card => {
+      card.style.opacity = 0;
+      card.style.transform = "translateY(30px)";
+      card.style.transition = "all 0.6s ease-out";
+      observer.observe(card);
+    });
+  </script>
+  <!-- AOS Scroll Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

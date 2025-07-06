@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – Neurovinc</title>
+  <link rel="stylesheet" href="/css/login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+    <a href="home.html"><img src="Assets/images/nav_logo.png" alt="Logo" width="240" height="62"></a>
+    <nav>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="friend.html">AI-Friend</a></li>
+        <li><a href="merch.html">Our Merch</a></li>
+        <li><a href="donation.html">Donation</a></li>
+        <li><a href="login.html" class="login-button">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Login Content -->
+  <main class="login-container">
+    <div class="login-box">
+      <h2>Login to Neurovinc</h2>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Login</button>
+
+        <p class="signup-link">
+            Don't have an account? <a href="/signup.html">Sign up here</a>
+        </p>
+      </form>
+    </div>
+
+    <div class="login-image">
+      <img src="/Assets/images/UI:UX Design.png" alt="Kids learning illustration">
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Neurovinc. All rights reserved.</p>
+  </footer>
+
+  <script src="/scripts/login.js"></script>
+</body>
+</html>
